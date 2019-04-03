@@ -1,0 +1,2 @@
+class Stockphoto < ApplicationRecord
+end

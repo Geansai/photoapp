@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+ <div id="itemsContainer">
+  
+  <h1>Stockphoto</h1>
+     
+      <% @stockphotos.each do |stockphoto| %>
+      <div class="itemhols">
+       <h1><%= stockphoto.title %></h1>
+       
+       <%= link_to (image_tag stockphoto.image_url, :class => "itemholsIm"), stockphoto %>
+        <p><%= stockphoto.description %></p>
+       <p>Price <%= number_to_currency(stockphoto.price, :unit => "€") %>
+       <br>
+        Category: <%= stockphoto.category %>
+        <br>
+        Photographer: <%= stockphoto.photographer %></p>
+        <br>
+        Tags: <%= stockphoto.tags %></p>
+       
+       <p>
+         <a href="/cart/<%= stockphoto.id %>" class="button">Add To Cart</a>
+         <%= link_to 'Show',  stockphoto, :class => "button", :role => "button" %>
+         <% if session[:login] == 1 %>  
+         <%= link_to 'Edit',  edit_stockphoto_path(stockphoto), :class => "button", :role => "button" %>
+         <%= link_to 'Destroy',  stockphoto, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button", :role => "button" %>
+         <% end %>
+       </p>
+        
+      </div>
+    <% end %>
+      
+</div>
+
+<br>
+<% if session[:login] == 1 %>    
+<%= link_to 'New Photo',  new_stockphoto_path, :class => "button", :role => "button" %>
+<% end %>
+
+
+

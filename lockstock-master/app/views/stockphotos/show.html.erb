@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+
+ <div class="field">
+   
+   <%= image_tag @stockphoto.image_url, :class => 'showIm'  %>
+     <h1><%= @stockphoto.title %></h1>
+       <h2><%= @stockphoto.description %></h1>
+   
+    <div class="smallfield">
+       <p>Price <%= number_to_currency(@stockphoto.price, :unit => "€") %>
+       <br>
+        Category: <%= @stockphoto.category %>
+        <br>
+        Photographer: <%= @stockphoto.photographer %></p>
+       <br>
+        Tags: <%= @stockphoto.tags %></p>
+       <p>
+        <a href="/cart/<%= @stockphoto.id %>" class="button">Add To Cart</a>
+         <%= link_to 'Back',  stockphotos_path, :class => "button", :role => "button" %>
+       
+       <% if session[:login] == 1 %>    
+         <%= link_to 'Edit',  edit_stockphoto_path(@stockphoto), :class => "button", :role => "button" %>
+         <%= link_to 'Destroy',  @stockphoto, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button", :role => "button" %>
+        
+      
+        
+<% end %>
+       
+         
+       </p>
+       
+       
+        
+      </div>
+   
+   
+   </div>
+
+
+
+
+
+

@@ -1,0 +1,359 @@
+.headSec {
+    min-height:10px;
+    background-color: #b3e0ff;
+    width: 100%;
+    margin-bottom:10px;
+    overflow: auto;
+    
+}
+
+.headSec h1 {
+    color: #ffffff;
+    font-size: 500%;
+    padding: 15px;
+    
+}
+
+ul { 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;    
+    
+}
+
+
+li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+}
+
+
+.mainCont { 
+    
+    margin: auto;
+    width:80%;
+    border: 3px solid #b3e0ff;
+    padding: 10px;
+    text-align: center;
+}
+
+.welcomeIm {width: 30%;}
+
+
+.foot {
+    min-height: 80px;
+    background-color: #b3e0ff;
+    width: 100%;
+    margin-top: 10px;
+    overflow: auto;
+    
+    
+}
+
+.container {
+      background: url("/asse");
+      background-repeat:no-repeat;
+      background-position:right bottom;
+      width: 100%;
+      min-height: 700px;
+}
+
+.headSec { object-fit: cover;
+    background: url("/assets/site/headim.jpg");
+    
+     background-repeat: no-repeat;
+     background-size: 100%;
+    background-color: black;
+    width: 100%;
+    margin-bottom:10px;
+    overflow: auto;
+    
+}
+
+
+#itemsContainer {
+    width: 100%;
+    text-align: center;
+    
+    
+}
+
+
+#itemsContainer h1 {
+   display: block;
+    color: #4CAF50;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-left: auto; 
+    margin-right: auto; 
+    display: block;
+    
+    
+    
+}
+
+
+.itemhols {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 22%;
+    padding:0px;;
+   
+}
+
+
+.itemhols h1 {
+   display: block;
+    color: #4CAF50;
+    text-align: center;
+    height: 20px;
+    padding: 2px 2px;
+    text-decoration: none;
+    font-size: 20px
+    
+}
+
+
+.itemhols p {
+   display: block;
+    color: #4CAF50;
+    text-align: center;
+    padding: 2px 2px;
+    text-decoration: none;
+    font-size: 16px
+    
+}
+
+
+
+.itemholsIm { object-fit: cover;
+     width: 100%;
+    background: 50% 50% no-repeat; 
+    height: 50%;
+       display: block;
+    
+}
+
+.showIm { max-height: 10%;
+    max-width: 50%;
+    ;
+      margin-left: auto; 
+    margin-right: auto; 
+    display: block;
+}
+
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 1px 1px;
+    cursor: pointer;
+}
+
+
+
+.container {
+ background: url("/assets/Site/clubhead.png");
+      background-repeat:no-repeat;
+    background-position:right bottom;
+   width: 100%;
+    min-height: 700px;
+}
+
+
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+
+
+
+
+
+/* Style the navigation menu */
+
+
+/* Navigation links */
+#navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 18%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+  text-align: center; /* If you want the text to be centered */
+}
+
+/* Add a background color on mouse-over */
+#navbar a:hover {
+  background-color: #000;
+}
+
+/* Style the current/active link */
+#navbar a.active {
+  background-color: white;
+}
+
+/* Add responsiveness - on screens less than 500px, make the navigation links appear
+on top of each other, instead of next to each other */
+@media screen and (max-width: 500px) {
+  #navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left; /* If you want the text to be left-aligned on small screens */
+  }
+}
+
+
+/*    Form Layout       */
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+
+.smallfield {width:47%; padding: 10px;
+ display: block; float: left;
+}
+
+.formContainer{color: grey ; padding: 10%;
+}
+
+
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+
+
+
+#customerstotal {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%; text-align: right;
+}
+
+#customerstotal td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;text-align: center;
+
+}
+
+#customerstotal tr:nth-child(even){background-color: #f2f2f2;}
+
+#customerstotal tr:hover {background-color: #ddd;}
+
+#customerstotal th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+.cartIm { object-fit: cover;
+     width: 120px;
+    background: 50% 50% no-repeat; 
+    height: 70px;
+       display: block;
+    
+}
+
+
+@media screen and (max-width:600px) {
+    .navBar {
+        font-size:5px;}
+        

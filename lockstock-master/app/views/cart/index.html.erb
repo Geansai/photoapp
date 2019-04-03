@@ -1,0 +1,51 @@
+<h1>Cart#index</h1>
+
+<% if @cart.empty? %>
+<p>You have not added any items yet</p>
+<% end %>
+
+<p id="notice"><%= notice %></p>
+<div id="itemsContainer">
+    <table id="customers">
+        <% total = 0 %>
+        <% @cart.each do |id, quantity| %>
+          <% stockphoto = Stockphoto.find_by_id(id) %>
+         <tr>
+            <td>
+                <div class="item">
+                    <%= link_to (image_tag stockphoto.image_url, :class =>"cartIm"), stockphoto %>
+                </div>
+                  </td>
+                  <td class="title"><%= link_to stockphoto.title, stockphoto %></td>
+            <td><a href="/cart/remove/<%= stockphoto.id %>">Remove From Cart</a></td>
+            <td class="price"><%= number_to_currency(stockphoto.price, :unit =>"€") %></td>
+            <td class="quantity"><%= quantity %></td>
+            <td><a href="/cart/decrease/<%= stockphoto.id %>">Decrease</a></td>
+            <td class="price"><%= number_to_currency(quantity * stockphoto.price, :unit =>"€") %></td>
+            
+                </tr>
+                <% total += quantity * stockphoto.price %>
+                
+                
+               
+                </tr>
+                <%end%>
+              </table>
+           
+              <table id="customerstotal"><tr><td>
+              Grand Total: <%= number_to_currency(total, :unit => "€") %>
+              </td></tr></table>
+             
+             <% if @cart.empty? %>
+    <h1> Your cart is empty</h1>
+
+
+              </div>
+
+                
+
+ 
+<% end %>
+
+<p><a href="/stockphotos" class="button">Continue Shopping</a></p>
+<a href="/clearcart" class="button">Empty Cart</a>

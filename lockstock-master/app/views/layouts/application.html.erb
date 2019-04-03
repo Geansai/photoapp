@@ -1,0 +1,47 @@
+ <header class="headSec">
+      <h1>Lock Stock Photography</h1>
+      
+      <ul>
+       
+        <div id="navbar">
+        <li><%= link_to "Lock Stock Photography", '/' %></li>
+        <li><%= link_to "Photo Catalogue", '/stockphotos' %></li>
+        <li><%= link_to "About", '/about' %></li>
+        <li><%= link_to "Contact Us", '/contactus' %></li>
+        <li><%= link_to "View Cart", "/cart" %></li>
+          <% if session[:login] == 1 %> 
+        <li><%= link_to "Admin Logout", logout_path %></li>
+        <% else %>
+        
+        <li><%= link_to "Admin Login", login_path %></li>
+        <% end %>
+
+      <% if user_signed_in? %>
+                 <li><a href="#">Hi <%= current_user.email %></a></li>
+                 <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+          <% else %>
+                 <li><%= link_to 'Register', new_user_registration_path %></li> 
+                 <li><%= link_to 'Sign in', new_user_session_path %></li>
+          <% end %>
+
+       
+       
+      </ul>
+      
+    </header>
+
+    <div class="container">
+    <%= yield %>
+    </div>
+
+<footer class="foot">
+<h1>Im the Footer</h1>
+</footer>
+
+
+ <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+
+</html>
