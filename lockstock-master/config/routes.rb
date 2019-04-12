@@ -20,4 +20,9 @@ Rails.application.routes.draw do
  get '/cart/decrease/:id' => 'cart#decrease'
  get '/cart/remove/:id' => 'cart#remove'
 
+
+ 
+
+
+root :to => 'site#home'
 end
