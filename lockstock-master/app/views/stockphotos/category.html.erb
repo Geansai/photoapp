@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+<div id="itemsContainer">
+<h1>Stockphotos</h1>
+    <% @stockphotos.each do |stockphoto| %>
+      <div class="itemhols">
+        <h1><%= stockphoto.title %></h1>
+        <%= link_to (image_tag stockphoto.image_url, :class=>"itemholsIm"), stockphoto %>
+       <p><%= stockphoto.description %>
+       </p>
+       <p><%= stockphoto.price %>
+        <br>
+        <%= stockphoto.category %>
+        <br>
+        <%= stockphoto.photographer %>
+        </p>
+        <p>        
+
+        <% unless webdev_signed_in? %>
+        <a href="/cart/<%= stockphoto.id %>" class="button">Add to Cart</a>  
+        <% end %>
+      <%= link_to 'Show', stockphoto, :class =>"button", :role=>"button" %>
+        
+
+<% if @stockphotos.length == 0  %>
+<br />
+<h2>Sorry we do not have any photos in that category</h2>
+<% end %>
+
+
+
+
+    <% if webdev_signed_in? %>
+    <%= link_to 'Edit', edit_stockphoto_path(stockphoto), :class =>"button", :role=>"button" %>
+    <%= link_to 'Destroy', stockphoto, method: :delete, data: { confirm: 'Are you sure?' }, :class =>"button",           :role=>"button" %>
+    
+    <% end %>
+    </p>
+     </div>
+    <% end %>
+  <br>
+
+   
+  <br>

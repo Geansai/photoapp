@@ -1,2 +1,16 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<div class="mainCont">
+    <h1>Welcome to Lock Stock Photography</h1>
+    <h3>Home of the best in affordable artsy stock photography</h3>
+    <%=image_tag("_1.jpg", :class=> "homeIm") %>
+    
+</div>
+
+
+<div class="mainCont"><h2>Categories</h2></div><br>
+<%= render 'layouts/categories' %>
+
+<br><br>
+
+  <div class="mainCont">
+<%= render 'layouts/search' %>
+</div>

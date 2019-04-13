@@ -61,6 +61,19 @@ class StockphotosController < ApplicationController
     end
   end
 
+def search
+     st = "%#{params[:q]}%"
+     @stockphotos = Stockphoto.where("tags like ?", st)
+     
+end
+
+def category
+    catName = params[:title]
+    @stockphotos = Stockphoto.where("category like ? ", catName)
+end
+
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_stockphoto

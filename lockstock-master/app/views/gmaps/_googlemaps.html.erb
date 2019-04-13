@@ -1,0 +1,40 @@
+
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+	<b>Start: </b>
+		<select id="start">
+            <option value="Sutton, Dublin">Sutton</option>
+            <option value="RDS">RDS</option>
+            <option value="Bray, Navan Road, Ireland">Bray</option>
+            <option value="Cabra Road, Cabra">Cabra</option>
+            <option value="Howth Junction Dart Station">Howth Junction</option>
+            <option value="Belfast">Belfast</option>
+        </select>
+        <b>End: </b>
+            <select id="end">
+				<option value="121 Sheriff Street">Lock Stock Offices</option>
+            </select>
+    <div id="map" style="width:100%; height:50%;"></div>
+    <script>
+      
+    </script>
+	<script src="googleMaps.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWfV4bNjM0O4kSFY9EMhkt8EiFMmCjIjs&callback=initMap"
+    async defer></script>
+  </body>
+</html>

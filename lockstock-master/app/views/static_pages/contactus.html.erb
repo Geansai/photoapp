@@ -1,4 +1,64 @@
 <% provide(:title, "Contact Us") %>
+<div class="mainCont">
 
-<h1>StaticPages#contactus</h1>
-<p>Find me in app/views/static_pages/contactus.html.erb</p>
+
+<h1>Contact Us</h1>
+<p>We always welcome contact from our clients and customers so if you have any queries please do not hesitate
+ to contact us via the form below.
+ <p> You can use this form if you wish to have your photos feature on this website. Please include links to your work if 
+ you wish to do so.</p>
+ <p>Alternatively you can call into our offices on 121 Sheriff Street, shown on Google Maps below.</p>
+</div><br><br>
+
+
+
+<br>
+<div class="mainCont">
+
+ <div class="container">
+  <form action="action_page.php">
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+ 
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+
+
+<script type="text/javascript">
+function showfield(name){
+	if(name == 'Other') {
+		document.getElementById('div1').innerHTML = 'Other: <input type="text" name="other" />';
+	}
+	else {
+		document.getElementById('div1').innerHTML='';
+	}	
+}
+</script>
+Where did you hear about us?
+<select name="select_opt" id="select_opt" class="form-control" onchange="showfield(this.options[this.selectedIndex].value)" required> 
+	<option value="">Please Select Source</option>  
+	<option value="Search Engine">Search Engine</option>
+	<option value="Social Media">Social Media</option>
+	<option value="E-Mail Campaigns">E-Mail Campaigns</option>
+	<option value="Exhibitions">Exhibitions</option>
+	<option value="Other">Other Sources, Please Specify</option>
+</select>
+<div id="div1"></div>
+
+
+    <input type="submit" value="Submit">
+    
+    
+    <br>
+    <div class="mainCont">
+<%= render 'gmaps/googlemaps' %>
+</div>
+
+  </form>
+  </div>
+</div> 

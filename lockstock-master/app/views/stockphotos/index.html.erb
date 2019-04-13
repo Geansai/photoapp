@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
 
- <div id="itemsContainer">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<div id="itemsContainer">
   
-  <h1>Stockphoto</h1>
+  <h1>Stockphotos</h1>
      
       <% @stockphotos.each do |stockphoto| %>
       <div class="itemhols">
@@ -17,11 +19,17 @@
         Photographer: <%= stockphoto.photographer %></p>
         <br>
         Tags: <%= stockphoto.tags %></p>
-       
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Use an element to toggle between a like/dislike icon -->
+<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
        <p>
+        <% unless webdev_signed_in? %>
          <a href="/cart/<%= stockphoto.id %>" class="button">Add To Cart</a>
+         <% end %>
+         
          <%= link_to 'Show',  stockphoto, :class => "button", :role => "button" %>
-         <% if session[:login] == 1 %>  
+         <% if webdev_signed_in? %>
          <%= link_to 'Edit',  edit_stockphoto_path(stockphoto), :class => "button", :role => "button" %>
          <%= link_to 'Destroy',  stockphoto, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button", :role => "button" %>
          <% end %>
@@ -33,7 +41,7 @@
 </div>
 
 <br>
-<% if session[:login] == 1 %>    
+<% if webdev_signed_in? %>    
 <%= link_to 'New Photo',  new_stockphoto_path, :class => "button", :role => "button" %>
 <% end %>
 

@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Image Gallery</title>
+		<script src="assets/ImageGallery.js"></script>
+		
+		 <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+    </head>
+	
+    <body onLoad="photoA()">
+	
+	<img src="images/site/img1.jpg" id="image" >
+    <div class="left_hold"><img onClick="photo(-1)" class="left" src="images/arrow_left.png"></div>
+    <div class="right_hold"><img onClick="photo(1)" class="right" src="images/arrow_right.png"></div>
+	
+	</body>
+	
+</html>

@@ -1,18 +1,18 @@
 class UserController < ApplicationController
     
-        def login
-        session[:login] = 1
-        session[:cart] = nil
-        flash[:notice] = "Admin Login sucessfull!!"
+   def login 
+      session[:login]  = 1
+      flash[:notice] = "Logged in ...... well done!"
+      redirect_to :controller => :stockphotos
+   end
+   
+   
+   def logout 
+       session[:login] = nil
+       flash[:notice] = "See you later...."
         redirect_to :controller => :stockphotos
-    end 
+  end
     
-    def logout
-        session[:login] = nil
-        session[:cart] = nil
-        flash[:notice] = "You have been successfully logged out!!"
-        redirect_to :controller => :stockphotos
-    end    
     
-
+    
 end
