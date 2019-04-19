@@ -29,16 +29,7 @@
     <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
 
 
-<script type="text/javascript">
-function showfield(name){
-	if(name == 'Other') {
-		document.getElementById('div1').innerHTML = 'Other: <input type="text" name="other" />';
-	}
-	else {
-		document.getElementById('div1').innerHTML='';
-	}	
-}
-</script>
+
 Where did you hear about us?
 <select name="select_opt" id="select_opt" class="form-control" onchange="showfield(this.options[this.selectedIndex].value)" required> 
 	<option value="">Please Select Source</option>  

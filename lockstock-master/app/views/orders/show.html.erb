@@ -62,6 +62,9 @@
   
 
  <div class="mainCont">
+    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+ Do you agree to fully comply to the restrictions outlined in our <a href="/license" target="_blank">Licensing Agreement</a> <input type="checkbox" id="myCheck" name="test" required>
+ <br>
     
     <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
 <input type="hidden" name="cmd" value="_xclick">
@@ -73,7 +76,5 @@
 <input type="hidden" name="return" value="https://78090775579c4066aa2b9e2ae6920b10.vfs.cloud9.us-east-2.amazonaws.com/paid" >
 </form>
 
-    <a href="/paid/<%= @order.id %>" class="button">Pay For Me!</a>
-</div>
 
  <br>

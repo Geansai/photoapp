@@ -1,6 +1,14 @@
 <p id="notice"><%= notice %></p>
 <div id="itemsContainer">
 <h1>Stockphotos</h1>
+
+
+<% if @stockphotos.length == 0  %>
+<br />
+<h2>Sorry we do not have any photos in that category</h2>
+<% end %>
+
+
     <% @stockphotos.each do |stockphoto| %>
       <div class="itemhols">
         <h1><%= stockphoto.title %></h1>
@@ -21,10 +29,7 @@
       <%= link_to 'Show', stockphoto, :class =>"button", :role=>"button" %>
         
 
-<% if @stockphotos.length == 0  %>
-<br />
-<h2>Sorry we do not have any photos in that category</h2>
-<% end %>
+
 
 
 

@@ -23,7 +23,9 @@ ul {
     
 }
 
-
+a  {font-weight: bolder;
+    color: white
+}
 li a {
     display: block;
     color: #ffffff;
@@ -33,9 +35,58 @@ li a {
     
 }
 
-body { background-image: linear-gradient(black, #b40000)}
+body { background-color:black}
 
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
 
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.navbar .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
 
 
 .mainCont { 
@@ -47,7 +98,7 @@ body { background-image: linear-gradient(black, #b40000)}
     background-image: linear-gradient(#681100, black); color: white;
     font-size: 20px;
 }
-.mainCont h1 {font-size: 25px;} 
+.mainCont h1 {font-size: 35px;} 
 
 .welcomeIm {width: 30%;}
 
@@ -59,9 +110,20 @@ body { background-image: linear-gradient(black, #b40000)}
     width: 100%;
     margin-top: 10px;
     overflow: auto; font-family: sans-serif;
-    font-size: 30px
+    font-size: 15px;
+    background-image: linear-gradient(#681100, black)
     
     
+}
+
+.catCont { 
+    
+    margin: auto;
+    width:98%;
+    padding: 10px;
+    text-align: center;
+    background-image: linear-gradient(black); color: white;
+    font-size: 20px;
 }
 
 #demo { 
@@ -129,7 +191,7 @@ body { background-image: linear-gradient(black, #b40000)}
    }
    .itemhols h1 {
    display: block;
-    color: #4CAF50;
+    color: #373636;
     text-align: center;
     height: 10px;
     padding: 2px 2px;
@@ -141,7 +203,7 @@ body { background-image: linear-gradient(black, #b40000)}
 
 .itemhols p {
    display: block;
-    color: #4CAF50;
+    color: #373636;
     text-align: center;
     padding: 2px 2px;
     text-decoration: none;
@@ -294,6 +356,10 @@ body { background-image: linear-gradient(black, #b40000)}
 
 
 
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 
 
@@ -328,6 +394,7 @@ body { background-image: linear-gradient(black, #b40000)}
     
 }
 
+}
 
 .itemhols p {
    display: block;
@@ -516,17 +583,18 @@ input[type=text], select {
 
 input[type=submit] {
     width: 100%;
-    background-color: grey;
+    background-color: #302e2e;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
     border-radius: 4px;
+    font-weight: bolder;
     cursor: pointer;
 }
 
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #212020;
 }
 
 textarea {
@@ -545,8 +613,8 @@ textarea {
  display: block; float: left; font-size: 20px; color: white;  background-color: #681100 
 }
 
-.fields {width:80%; padding-left: 10%; padding-right: 10%;
- display: block; float: left; font-size: 20px; color: white;  background-image: linear-gradient(#681100, black); 
+.fields {width:80%; padding-left: 10%; padding-right: 10%; overflow: hidden; 
+ display: inline-block; float: left; font-size: 20px; color: white;  background-image: linear-gradient(#681100, black); 
 }
 
 
@@ -567,7 +635,7 @@ textarea {
 
 #customers tr:nth-child(even){background-color: #47000;}
 
-#customers tr:hover {background-color: #a80000;}
+#customers tr:hover {background-color: #6b0101;}
 
 #customers th {
     padding-top: 12px;
@@ -585,17 +653,19 @@ textarea {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%; text-align: right;
+    font-weight: bolder;
+    font-size: larger;
 }
 
-#customerstotal td, #customers th {
-    border: 1px solid #ddd;
+#customerstotal td, #customers th {color:white;
+    border: 1px solid black;
     padding: 8px;text-align: center;
 
 }
 
 #customerstotal tr:nth-child(even){background-color: #f2f2f2;}
 
-#customerstotal tr:hover {background-color: #ddd;}
+#customerstotal tr:hover {background-color: #6b0101;}
 
 #customerstotal th {
     padding-top: 12px;
@@ -663,7 +733,7 @@ li {color:white}
    }
    .cathols h1 {
    display: block;
-    color: #4CAF50;
+    color: #373636;
     text-align: center;
     height: 20px;
     padding: 2px 2px;
@@ -675,7 +745,7 @@ li {color:white}
 
 .cathols p {
    display: block;
-    color: #4CAF50;
+    color: #373636;
     text-align: center;
     padding: 2px 2px;
     text-decoration: none;
@@ -760,7 +830,7 @@ cursor:pointer;
    }
    .cathols h1 {
    display: block;
-    color: #4CAF50;
+    color: #373636;
     text-align: center;
     height: 20px;
     padding: 2px 2px;
@@ -772,7 +842,7 @@ cursor:pointer;
 
 .cathols p {
    display: block;
-    color: #4CAF50;
+    color: #373636;
     text-align: center;
     padding: 2px 2px;
     text-decoration: none;
@@ -861,7 +931,7 @@ cursor:pointer;
    }
    .cathols h1 {
    display: block;
-    color: #4CAF50;
+    color: #373636;
     text-align: center;
     height: 20px;
     padding: 2px 2px;
@@ -873,7 +943,7 @@ cursor:pointer;
 
 .cathols p {
    display: block;
-    color: #4CAF50;
+    color: #373636;
     text-align: center;
     padding: 2px 2px;
     text-decoration: none;

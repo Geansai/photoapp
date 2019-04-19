@@ -29,8 +29,8 @@
     
     </tr>
     
-    <% linetotal =(stockphoto.quantity * stockphoto.price) %>
-    <% @total += linetotal %>
+    <% linetotal =(stockphoto.quantity * stockphoto.price, :unit=>"€") %>
+    <% @total += linetotal, :unit=>"€" %>
     <% end %>
     
     <tr>
@@ -41,7 +41,7 @@
     <tr>
         <% shipping = 25 %>
         <% @grandtotal = shipping + @total %>
-        <td>Shipping &euro;25</td>
+        <td>Licensing Fee &euro;25</td>
         <td>Your Total payable today is: &euro;<%= @grandtotal %></td>
         </tr>
 </table>
@@ -53,7 +53,7 @@
   
 
   <div class="mainCont">
-    <form action="/action_page.php">
+     <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
  Do you agree to fully comply to the restrictions outlined in our <a href="/license" target="_blank">Licensing Agreement</a> <input type="checkbox" id="myCheck" name="test" required>
  <br>
     <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
@@ -78,8 +78,3 @@
  
 </div>
 
-<script>
-function myFunction() {
-  document.getElementById("myCheck").required = true;
-}
-</script>

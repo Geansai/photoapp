@@ -1,7 +1,7 @@
 <% @categories.each do |category| %>
        <div class="cathols">
           <div class="gallery-image">  
-           <%= link_to (image_tag category.image, :class=>"itemholsIm"), category %>
+           <%= link_to (image_tag category.image, :class=>"catholsIm"), category %>
             <div class="gallery-text">
 
 <a href="/category/<%= category.title %>" class="catlink" ><%= category.title %></a>

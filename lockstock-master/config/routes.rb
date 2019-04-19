@@ -54,6 +54,7 @@ get '/orders' => 'orders#index'
 get '/license' => 'static_pages#license'
 post '/search' => 'stockphotos#search'
 get '/imagegallery' => 'static_pages#imagegallery'
+
 end
 
 

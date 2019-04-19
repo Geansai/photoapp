@@ -115,3 +115,66 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
 function myFunction(x) {
   x.classList.toggle("fa-thumbs-down");
 } 
+
+
+
+function myFunction() {
+  document.getElementById("myCheck").required = true;
+}
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+} 
+
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
+
+function showfield(name){
+	if(name == 'Other') {
+		document.getElementById('div1').innerHTML = 'Other: <input type="text" name="other" />';
+	}
+	else {
+		document.getElementById('div1').innerHTML='';
+	}	
+}
+
+// Set the date we're counting down to
+var countDownDate = new Date("Jun 1, 2019 00:00:01").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = "June Sale in " + days + ":" + hours + ":"
+  + minutes + ":" + seconds;
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Sale On our Catalogue All This Month!";
+  }
+}, 1000);
